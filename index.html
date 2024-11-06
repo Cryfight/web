@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Pizzarole</title>
+    <title>Pizza Yaja - ¡Bienvenidos a la Mejor Pizzería!</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,40 +23,71 @@
             color: #fff;
             text-decoration: none;
             margin: 0 15px;
+            font-weight: bold;
         }
-        .container {
+        .hero {
+            background-image: url('imagenes/hero_image.jpg'); /* Imagenes grandes para llamar la atención */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+            z-index: -1;
+        }
+        .hero h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .btn-primary {
+            background-color: #d44;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .menu-section {
             max-width: 1200px;
-            margin: 20px auto;
+            margin: 40px auto;
             padding: 20px;
-            background-color: #fff;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .menu-section h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
         }
         .menu-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin: 20px 0;
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            text-align: center;
         }
         .menu-item img {
-            width: 100px;
-            height: 100px;
+            width: 100%;
+            height: auto;
             border-radius: 8px;
-            margin-right: 15px;
         }
         .menu-item h3 {
-            margin: 0;
-            color: #333;
-        }
-        .menu-item p {
-            margin: 5px 0 0;
-            color: #666;
-        }
-        .menu-item .price {
-            font-weight: bold;
-            color: #d44;
+            font-size: 22px;
+            margin-top: 10px;
         }
         .footer {
             background-color: #333;
@@ -73,53 +104,42 @@
     </style>
 </head>
 <body>
+    <!-- Barra de navegación -->
     <div class="navbar">
         <div>
-            <a href="index.html">Home</a>
-            <a href="shop.html">Shop</a>
-            <a href="blogs.html">Blogs</a>
-            <a href="connect.html">Connect Us</a>
-        </div>
-        <div>
-            <a href="#">Menu Style 3</a>
+            <a href="index.html">Principal</a>
+            <a href="shop.html">Menu</a>
+            <a href="blogs.html">Comentarios</a>
+            <a href="connect.html">Contacto</a>
         </div>
     </div>
 
-    <div class="container">
-        <h1>Pizzarole - Delicious Pizzas</h1>
+    <!-- Sección Hero - Bienvenida -->
+    <div class="hero">
+        <h1>Bienvenidos a Pizza Yaja</h1>
+        <p>Disfruta las mejores pizzas, hechas artesanalmente con los ingredientes más frescos.</p>
+        <a href="shop.html" class="btn-primary">Ver Menú</a>
+    </div>
+
+    <!-- Sección de Productos Destacados -->
+    <div class="menu-section">
+        <h2>Productos Destacados</h2>
         <div class="menu-item">
-            <img src="imagenes/double_petty_veg_burger.jpg" alt="Double Petty Veg Burger">
-            <div>
-                <h3>Pizza Extra Queso</h3>
-                <p>Extra queso y super jugosa, doble jamón y extra salsa $40.00</p>
-            </div>
-            <div class="price">$9000</div>
+            <img src="imagenes/double_petty_veg_burger.jpg" alt="Pizza Extra Queso">
+            <h3>Pizza Extra Queso</h3>
+            <p>Extra queso y jugosa, con doble jamón y salsa especial. ¡Irresistible!</p>
         </div>
         <div class="menu-item">
             <img src="imagenes/chicken_burger.jpg" alt="Chicken Burger">
-            <div>
-                <h3>Chicken Burger</h3>
-                <p>Marilled between two grains, blended liquids to run, the burger boasts a symphony.</p>
-            </div>
-            <div class="price">$17.56</div>
+            <h3>Chicken Burger</h3>
+            <p>Deliciosa hamburguesa con pollo marinado y un toque secreto de la casa.</p>
         </div>
         <div class="menu-item">
             <img src="imagenes/pineapple_pizza.jpg" alt="Pineapple Pizza">
-            <div>
-                <h3>Pineapple Pizza</h3>
-                <p>I smoke in an ordinary journey to a targeted brown with our familiarity.</p>
-            </div>
-            <div class="price">$24.50</div>
+            <h3>Pineapple Pizza</h3>
+            <p>Una mezcla perfecta de dulce y salado con piña fresca. ¡Un clásico!</p>
         </div>
     </div>
 
-    <div class="footer">
-        <p>CONTACTENOS</p>
-        <p>DIRECCION</p>
-        <p>89547065-8518695-6918556</p>
-        <p>PIZAYAJA.com</p>
-        <p>OUR LINKS</p>
-        <p>CORREO</p>
-    </div>
 </body>
 </html>
